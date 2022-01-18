@@ -6150,7 +6150,9 @@ __attribute__((swift_name("MessageRepository")))
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("RoomRepository")))
-@interface CybertronRoomRepository : CybertronBase
+@interface CybertronRoomRepository : CybertronBase <CybertronKoin_coreKoinComponent>
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) CybertronRoomRepositoryCompanion *companion __attribute__((swift_name("companion")));
 - (id<CybertronKotlinx_coroutines_coreFlow>)acceptOthersRequestToJoinRoomRoomId:(NSString *)roomId userId:(NSString *)userId __attribute__((swift_name("acceptOthersRequestToJoinRoom(roomId:userId:)")));
 - (id<CybertronKotlinx_coroutines_coreFlow>)acceptSelfRequestToJoinRoomId:(NSString *)roomId __attribute__((swift_name("acceptSelfRequestToJoin(roomId:)")));
