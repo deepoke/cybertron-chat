@@ -1,0 +1,6 @@
+framework module cybertron {
+    umbrella header "cybertron.h"
+
+    export *
+    module * { export * }
+}
